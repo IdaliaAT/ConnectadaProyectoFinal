@@ -1,0 +1,455 @@
+#root header {
+    max-width: 1468px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(19, 30, 88);
+    font-size: large;
+    font-family: "Poppins";
+}
+
+body {
+    font-size: 1 rem;
+    font-family: "Poppins";
+    background: url(./img/moroccan-flower.png)
+}
+
+html {
+    font-size: 60%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.fijar {
+    overflow: hidden;
+    height: 100vh;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.sombra {
+    background-color: rgb(255, 255, 255);
+    padding: 4rem;
+    border-radius: 1.2rem;
+}
+
+header h1 {
+    padding: 3rem 0;
+    margin: 0;
+    color: rgb(241, 241, 205);
+    text-align: center;
+}
+
+.formulario {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10rem 0;
+}
+
+@media (min-width> 768px) {
+    .formulario {
+        padding: 5rem 0;
+    }
+}
+
+.formulario legend {
+    font-size: 3.6rem;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    color: rgb(241, 241, 110);
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(241, 241, 110);
+}
+
+.formulario .campo {
+    display: grid;
+    margin-bottom: 2rem;
+    color: rgb(241, 241, 110);
+}
+
+.formulario label {
+    color: rgb(22, 6, 137);
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"] {
+    background-color: rgb(236, 232, 232);
+    padding: 1rem;
+    border: none;
+    flex: 1;
+    font-size: 2rem;
+}
+
+.formulario input[type="submit"] {
+    background-color: rgb(40, 30, 234);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: whitesmoke;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2rem;
+    width: 100%;
+    transition: background-color 300ms ease;
+}
+
+@media (min-width: 768px) {
+    .formulario input[type="submit"] {
+        display: block;
+        padding: 1rem 5rem;
+    }
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #67d469;
+    cursor: pointer;
+}
+
+.formulario select {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    text-align: center;
+    color: #2b1a2d;
+    font-size: 2rem;
+    background-color: rgb(190, 186, 186);
+}
+
+.alerta {
+    padding: 2rem 5rem;
+    max-width: 60rem;
+    margin: 2rem auto 2rem auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.alerta.error {
+    background-color: whitesmoke;
+    border-left: 5px solid #b91c1c;
+    color: #b91c1c;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.contenedor-presupuesto {
+    margin-top: -5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(5rem);
+}
+
+.dos-columnas {
+    flex-direction: column;
+}
+
+.dos-columnas :first-child {
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .dos-columnas {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+    .dos-columnas>div {
+        width: 50%;
+    }
+    .dos-columnas :first-child {
+        margin-bottom: 0;
+    }
+}
+
+.formulario input[type="text"].nuevo-presupuesto,
+.formulario input[type="number"].nuevo-presupuesto {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.contenedor-presupuesto svg {
+    width: 25rem;
+}
+
+.contenido-presupuesto {
+    width: 100%;
+}
+
+.contenido-presupuesto p {
+    font-weight: 400;
+    color: rgb(23, 7, 241);
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-presupuesto p {
+        text-align: left;
+    }
+}
+
+.contenido-presupuesto p.negativo,
+.contenido-presupuesto p.negativo span {
+    color: #DC2626;
+}
+
+.contenido-presupuesto span {
+    font-weight: 900;
+    color: rgb(54, 54, 57);
+}
+
+.reset-app {
+    border: none;
+    background-color: #2a0bf4f4;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 1rem;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.reset-app:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+main {
+    padding-top: 10rem;
+}
+
+.filtros .campo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+}
+
+.filtros label {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: black;
+}
+
+.filtros select {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: rgb(243, 243, 229);
+    font-size: 2rem;
+}
+
+.listado-gastos {
+    margin-top: 3rem;
+}
+
+.listado-gastos h2 {
+    color: rgb(33, 33, 30);
+    font-size: 2.3rem;
+}
+
+.no-gastos {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.gasto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    color: rgb(73, 70, 70);
+}
+
+.cantidad-gasto {
+    font-size: 2.4rem;
+    color: rgb(40, 74, 245);
+    font-weight: 900;
+}
+
+.contenido-gasto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contenido-gasto img {
+    width: 8rem;
+}
+
+.descripcion-gasto p {
+    margin: 0 0 0.3rem 0;
+}
+
+.descripcion-gasto .categoria {
+    color: rgb(40, 74, 245);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.descripcion-gasto p {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.descripcion-gasto .nombre-gasto {
+    color: rgb(79, 78, 78);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+}
+
+.descripcion-gasto .nombre-gasto:hover {
+    cursor: pointer;
+}
+
+.descripcion-gasto .fecha-gasto {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: rgb(79, 78, 78);
+}
+
+.descripcion-gasto .fecha-gasto span {
+    font-weight: 400;
+}
+
+.nuevo-gasto {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+}
+
+.nuevo-gasto img {
+    width: 5rem;
+    border-radius: 5rem;
+}
+
+.nuevo-gasto img:hover {
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    background-color: rgba(15, 26, 122, 0.978);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal .cerrar-modal {
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+}
+
+.modal .cerrar-modal img {
+    width: 5rem;
+    border-radius: 5rem;
+}
+
+.modal .formulario {
+    max-width: 80rem;
+    width: 40rem;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+
+.modal label {
+    color: rgb(234, 223, 173);
+    font-size: 2rem;
+}
+
+body .modal {
+    overflow: hidden;
+}
+
+.modal .formulario.animar {
+    position: relative;
+    opacity: 1;
+}
+
+.modal .formulario.cerrar {
+    opacity: 0;
+}
+
+.modal label {
+    text-align: left;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+    font-size: 1rem !important;
+}
+
+.swipe-action__leading {
+    background-color: blue;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.swipe-action__trailing {
+    background-color: #f70c0c;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.swipeable-list .swipe-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: right;
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
